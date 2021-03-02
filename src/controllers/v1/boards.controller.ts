@@ -1,4 +1,3 @@
-
 import {
   Get,
   Res,
@@ -8,7 +7,7 @@ import {
   Post,
   Delete,
   Put,
-  Authorized,
+  Authorized
 } from "routing-controllers";
 import { BoardsService } from "../../services/v1/boards.service";
 
@@ -16,6 +15,7 @@ import { BoardsService } from "../../services/v1/boards.service";
 class BoardController {
   constructor(private readonly boardsService: BoardsService) {}
 
+  @Authorized()
   @Get("/")
   iceCreamList(@Res() response: any) {
     const boards = this.boardsService.getBoards();

@@ -4,12 +4,13 @@
   "description": "Backend ice-cream-app",
   "main": "index.js",
   "scripts": {
-    "lint": "tslint -p tsconfig.json",
+    "lint": "tslint -p tsconfig.json && npx eslint ./",
     "build": "npx tsc -p tsconfig.json",
     "start": "npx ts-node src/index.ts",
     "dev": "nodemon src/index.ts",
     "test": "jest",
     "test-watch": "jest --watch",
+    "prettier": "prettier --write ./**/*.{js,ts} --staged",
     "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
     "typeorm:version": "npm run typeorm version",
     "migration:generate": "npm run typeorm migration:generate -- -n",
@@ -39,10 +40,13 @@
     "@types/morgan": "^1.9.0",
     "@types/supertest": "^2.0.9",
     "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^4.16.0",
+    "@typescript-eslint/parser": "^4.16.0",
+    "eslint": "^7.21.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "nodemon": "^2.0.4",
-    "prettier": "^2.0.5",
+    "prettier": "^2.2.1",
     "pretty-quick": "^2.0.1",
     "supertest": "^4.0.2",
     "ts-jest": "^26.1.1",
@@ -62,6 +66,8 @@
     "class-validator": "^0.12.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "lint": "^0.7.0",
@@ -107,8 +113,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint && yarn run test && pretty-quick --staged",
-      "pre-push": "yarn run lint && yarn run test"
+      "pre-commit": "npm run lint && npm run prettier && npm run test && pretty-quick --staged",
+      "pre-push": "npm run lint && npm run test"
     }
   }
 }

@@ -1,7 +1,7 @@
-var path = require('path');
+var path = require("path");
 
-console.log(path.resolve(__dirname, process.env.DATABASE_ENTITY_DIRECTORY))
-console.log(path.resolve(__dirname, './src/migrations/**/*.ts'))
+console.log(path.resolve(__dirname, process.env.DATABASE_ENTITY_DIRECTORY));
+console.log(path.resolve(__dirname, "./src/migrations/**/*.ts"));
 
 module.exports = {
   type: process.env.DATABASE_TYPE,

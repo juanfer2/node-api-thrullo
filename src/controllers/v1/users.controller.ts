@@ -12,7 +12,7 @@ import {
 import { UserService } from "../../services/v1/user.service";
 import { UserValidator } from "../../validators/v1/user.validator";
 
-@JsonController("/v1/users")
+@JsonController("/api/v1/users")
 class UserController {
   constructor(private readonly userService: UserService) {}
 

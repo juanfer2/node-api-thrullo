@@ -1,0 +1,8 @@
+/build
+/dist
+
+.eslintrc.js
+.prettierignore
+.prettierrc
+
+ormconfig.js

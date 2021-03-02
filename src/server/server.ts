@@ -21,11 +21,7 @@ export default class Server {
     this.connect()
       .then(() => {
         // api docs setup
-        app.use(
-          "/api-docs",
-          swaggerUi.serve,
-          swaggerUi.setup(specs.default, { explorer: true })
-        );
+        app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs.default, { explorer: true }));
 
         // application logger setup
         app.use(morgan(LOG_FORMAT, { stream }));

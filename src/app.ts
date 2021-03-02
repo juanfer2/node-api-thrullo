@@ -10,12 +10,12 @@ const app: express.Application = createExpressServer({
   classTransformer: true,
   validation: {
     validationError: {
-      target: true,
-    },
+      target: true
+    }
   },
   cors: true,
   controllers: [resolve(__dirname, "./controllers/**/*{.ts,.js}")], // we specify controllers we want to use
-  middlewares: [resolve(__dirname, "./middlewares/**/*{.ts,.js}")], // we specify middlewares we want to use
+  middlewares: [resolve(__dirname, "./middlewares/**/*{.ts,.js}")] // we specify middlewares we want to use
 });
 
 export default app;

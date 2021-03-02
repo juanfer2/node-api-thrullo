@@ -11,9 +11,9 @@ export const app = createExpressServer({
   classTransformer: true,
   validation: {
     validationError: {
-      target: false,
-    },
+      target: false
+    }
   },
   controllers: [resolve(__dirname, "../controllers/**/*{.ts,.js}")], // we specify controllers we want to use
-  middlewares: [resolve(__dirname, "../middlewares/**/*{.ts,.js}")], // we specify middlewares we want to use
-}).listen(randomTestPort, () => {});
+  middlewares: [resolve(__dirname, "../middlewares/**/*{.ts,.js}")] // we specify middlewares we want to use
+}).listen(randomTestPort, () => undefined);

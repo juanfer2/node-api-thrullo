@@ -6,7 +6,7 @@ import { getCustomRepository } from "typeorm";
 const authorizationChecker = async (action: Action) => {
   try {
     const userRepository = getCustomRepository(UserRepository);
-    const PRIVATE_KEY: string = "ñhpf98q34yp9rqoiar";
+    const PRIVATE_KEY = "ñhpf98q34yp9rqoiar";
     /* tslint:disable:no-string-literal */
     const token = action.request.headers["authorization"];
 

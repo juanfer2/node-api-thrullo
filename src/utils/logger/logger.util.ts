@@ -36,7 +36,9 @@ const printFormat = (info: TransformableInfo) => {
   const { timestamp, level, message, ...args } = info;
   const ts = timestamp.slice(0, 19).replace("T", " ");
 
-  return `[${level}]: ${ts} ${message} ${Object.keys(args).length ? JSON.stringify(args, null, 2) : ""}`;
+  return `[${level}]: ${ts} ${message} ${
+    Object.keys(args).length ? JSON.stringify(args, null, 2) : ""
+  }`;
 };
 
 export const stream = {

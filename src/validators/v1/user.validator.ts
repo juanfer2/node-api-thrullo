@@ -9,12 +9,12 @@ import {
   IsFQDN,
   IsDate,
   Min,
-  Max,
+  Max
 } from "class-validator";
 
 export class UserValidator {
   @IsNotEmpty({
-    message: "EL nombre no puede estar vacío",
+    message: "EL nombre no puede estar vacío"
   })
   firstName: string;
 

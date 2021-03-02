@@ -5,11 +5,11 @@ import {
   Column,
   ObjectIdColumn,
   CreateDateColumn,
-  UpdateDateColumn,
+  UpdateDateColumn
 } from "typeorm";
 import { Transform } from "class-transformer";
 
-@Entity("User")
+@Entity("users")
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
@@ -17,10 +17,10 @@ export class User {
   @Column()
   username: string;
 
-  @Column()
+  @Column({ name: "first_name" })
   firstName: string;
 
-  @Column()
+  @Column({ name: "last_name" })
   lastName: string;
 
   @Column()
@@ -29,7 +29,6 @@ export class User {
   @Column()
   password: string;
 
-  @Column()
   passwordConfirmation?: string;
 
   @Column()
@@ -37,9 +36,9 @@ export class User {
 
   token?: string;
 
-  @CreateDateColumn({ type: "timestamp" })
+  @CreateDateColumn({ type: "timestamp", name: "created_at" })
   createdAt: Date;
 
-  @UpdateDateColumn({ type: "timestamp" })
+  @UpdateDateColumn({ type: "timestamp", name: "updated_at" })
   updatedAt: Date;
 }

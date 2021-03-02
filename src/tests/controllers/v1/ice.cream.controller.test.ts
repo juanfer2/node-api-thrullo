@@ -20,7 +20,7 @@ describe("Prueba de listar helados", () => {
     const data = {
       name: "Chicle",
       imageUrl:
-        "https://dam.cocinafacil.com.mx/wp-content/uploads/2020/03/CONO-DE-HELADO-SABOR-CHICLE.jpg",
+        "https://dam.cocinafacil.com.mx/wp-content/uploads/2020/03/CONO-DE-HELADO-SABOR-CHICLE.jpg"
     };
 
     await request(app)
@@ -33,8 +33,7 @@ describe("Prueba de listar helados", () => {
   it("Debe de actualizar un helado", async () => {
     const data = {
       name: "Negro",
-      image_url:
-        "https://i.pinimg.com/564x/a5/70/61/a57061bdb12a50e04fdb7da634787ea5.jpg",
+      image_url: "https://i.pinimg.com/564x/a5/70/61/a57061bdb12a50e04fdb7da634787ea5.jpg"
     };
 
     await request(app)

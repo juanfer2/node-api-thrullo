@@ -4,7 +4,9 @@ import { ENV } from "./constants/environments.constant";
 
 switch (process.env.NODE_ENV) {
   case ENV.LOCAL:
+    break;
   case ENV.DEVELOPMENT:
+    break;
   default:
     config({
       path: resolve(__dirname, !process.env.NODE_ENV ? "../.env.example" : "../.env")
@@ -19,5 +21,4 @@ switch (process.env.NODE_ENV) {
     config({
       path: resolve(__dirname, "./production.env")
     });
-    break;
 }

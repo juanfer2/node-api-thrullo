@@ -13,15 +13,15 @@ const options = {
       description: "IcreCream v1.0.0",
       license: {
         name: "MIT",
-        url: "https://opensource.org/licenses/MIT",
-      },
+        url: "https://opensource.org/licenses/MIT"
+      }
     },
     servers: [
       {
-        url: "localhost:4000",
-      },
-    ],
-  },
+        url: "localhost:4000"
+      }
+    ]
+  }
 };
 
 const specs = swaggerJsdoc(options);
