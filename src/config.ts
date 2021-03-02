@@ -9,7 +9,7 @@ switch (process.env.NODE_ENV) {
     break;
   default:
     config({
-        path: resolve(__dirname, !process.env.NODE_ENV ? "../.env.example" : "../.env")
+      path: resolve(__dirname, !process.env.NODE_ENV ? "../.env.example" : "../.env")
     });
     break;
   case ENV.STAGING:
